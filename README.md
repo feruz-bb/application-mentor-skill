@@ -1,4 +1,4 @@
-# Application Mentor
+# Application Mentor V1.0
 
 Application Mentor is an AI-agent skill for reviewing a student's own grant,
 scholarship, internship, exchange, and university application documents. It
