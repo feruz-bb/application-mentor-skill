@@ -1,0 +1,91 @@
+{
+  "skill_name": "application-mentor",
+  "evals": [
+    {
+      "id": 0,
+      "name": "motivation-letter-over-limit-and-generic",
+      "prompt": "Salom! Men Germaniyadagi bir universitetning Master's dasturiga topshiryapman, Economics yo'nalishi. Ariza shartlarida motivation letter maksimum 500 so'z deb yozilgan. Deadline 2 haftadan keyin. Quyida men yozgan xatni qo'yyapman, iltimos ko'rib bering, kuchlimi yoki yo'qmi?\n\n---\n\nDear Admission Office/Selection Committe/To whom it may concern,\n\nKirish: My name is Jasur Nazarov and I am writing this letter to apply for the Master's program at your esteemed university. It has always been my dream to study abroad and I believe that this program is the perfect opportunity for me to develop myself and broaden my horizons.\n\nI am currently a fourth-year student at the Tashkent State University of Economics, where I am studying Economics. From a young age, I have always been passionate about economics and finance. I have always been interested in how markets work and how economic policies affect ordinary people. This passion has motivated me throughout my studies and has led me to where I am today.\n\nDuring my studies, I have been a hardworking and responsible student. I always complete my assignments on time and I work well both independently and in a team. My professors can confirm that I am one of the most motivated students in my group. I have also participated in many conferences and seminars, where I have gained invaluable experience and made many useful connections.\n\nI have chosen your university because it is one of the best universities in Europe and it has a very good reputation. What really draws me into the program is the comprehensive curriculum and the opportunity to interact with erudite academics who are experts in their field. I am confident that studying at your university will give me the knowledge and skills that I need for my future career. Furthermore, the international environment of your university will allow me to meet students from many different countries and learn about their cultures, which I think is very important in today's globalized world.\n\nIn addition to my academic achievements, I have also been involved in various extracurricular activities. I have volunteered for several organizations and I have helped to organize many events. These experiences have taught me valuable lessons about leadership and teamwork, and they have helped me to become a better person overall. I believe that these qualities will help me to succeed in your program.\n\nStudying at your university would be an invaluable experience for me and a major chance to enhance my personal image and curriculum vitae. It would open many doors for me and would allow me to achieve my full potential. No matter where my future may lead me, I will always be grateful for this opportunity.\n\nAfter graduating, I plan to work in the field of economics and contribute to the development of my country. I want to use the knowledge that I gain from your program to help solve the economic problems that we face. I am confident that with the education I receive from your university, I will be able to make a real difference in the world.\n\nI am available to start from September 2023 and I am ready to relocate. I look forward with great relish to the possibility of joining your university and I hope that you will consider my application favourably.\n\nThank you very much for your time and consideration.\n\nSincerely,\nJasur Nazarov",
+      "expected_output": "A mentor-style review in Uzbek that counts the words (519 vs the stated 500 limit), flags the hedged salutation, the leftover 'Kirish:' scaffolding label, the stale 'September 2023' date, the generic program-fit paragraph that could be sent to any university, and the selfish framing; gives quoted before/after rewrites built from the student's own material with placeholders for missing facts; and does NOT hand back a finished rewritten letter.",
+      "files": [],
+      "assertions": [
+        "States that the letter exceeds the 500-word limit and gives a specific word count (519, or a number within 515-525)",
+        "Flags the hedged multi-option salutation 'Dear Admission Office/Selection Committe/To whom it may concern'",
+        "Flags the leftover Uzbek scaffolding label 'Kirish:' left in the submitted text",
+        "Flags the stale date 'September 2023' as inconsistent with a current application",
+        "Identifies that the program-fit paragraph is generic and could be sent to any university (applies a swap/thumb test or equivalent reasoning)",
+        "Flags the self-serving framing 'enhance my personal image and curriculum vitae'",
+        "Does NOT output a complete, submission-ready rewritten letter for the student",
+        "The review is written in Uzbek (the language the student used)",
+        "Provides at least one SUBSTANTIVE rewrite of a body sentence or paragraph (not merely fixing the salutation or spelling), quoting the student's original and offering replacement wording",
+        "Marks facts it does not have with an explicit placeholder (e.g. [YOZING: ...]) rather than inventing the student's thesis topic, GPA, conference names or test scores",
+        "The review is proportionate to the document: under roughly 1100 words for this 519-word letter"
+      ]
+    },
+    {
+      "id": 1,
+      "name": "cv-duties-not-results",
+      "prompt": "Assalomu alaykum. Men Erasmus Mundus magistratura dasturiga topshirmoqchiman (Economics/Public Policy yo'nalishi). CV'imni tayyorladim, fayl biriktirilgan: evals/files/Dilnoza_Rahimova_CV.docx\n\nShu CV yetarlicha kuchlimi? Nimalarni o'zgartirishim kerak? Rahmat.",
+      "expected_output": "A CV review in Uzbek that reads the .docx (ideally with the bundled script), flags duties-instead-of-results throughout, the Microsoft Office 'skills' list, the third-person slippage in the conference entry, the unprofessional email, the personal-data clutter in the header, and the .docx-instead-of-PDF issue; and rewrites at least one entry concretely.",
+      "files": [
+        "evals/files/Dilnoza_Rahimova_CV.docx"
+      ],
+      "assertions": [
+        "Successfully reads the .docx file and discusses its actual contents",
+        "Flags that work-experience entries list duties rather than results or outcomes",
+        "Flags that the Skills section lists generic software (Microsoft Word/Excel/Zoom) rather than real professional skills",
+        "Flags the third-person slippage in the conference entry ('Our student took part...') inside an otherwise first-person CV",
+        "Flags the unprofessional email address (dilnoza_2003_cutie@mail.ru)",
+        "Flags the personal-data clutter in the header (Instagram, WhatsApp, date of birth, gender, or marital status)",
+        "Recommends exporting/submitting the CV as PDF rather than .docx",
+        "Provides at least one concretely rewritten CV entry showing how to state an outcome",
+        "Notes the absence of quantification (numbers, GPA, scale, selection ratios) in the CV",
+        "The review is written in Uzbek",
+        "Does not assert facts about the student that the CV does not contain (e.g. stating a graduation year, GPA or IELTS score as fact); any example numbers used in rewrites are explicitly marked as invented or left as placeholders",
+        "Catches at least one finer defect beyond the obvious ones: the missing +998 country code, the three inconsistent date formats, or volunteering being filed under WORK EXPERIENCE",
+        "Does not praise a property of the CV that is not actually true of it (for example claiming the sections are in reverse-chronological order when they are not)",
+        "The review is proportionate: under roughly 2000 words"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "uzbek-tavsiyanoma-wrong-document-type",
+      "prompt": "Salom. Prezident stipendiyasiga hujjat topshiryapman. Dekanimiz imzolashi uchun tavsiyanoma tayyorlab berdim, fayl shu yerda: evals/files/Tavsiyanoma_Rahimova.docx\n\nKo'rib chiqing, hammasi joyidami? Nimadir yetishmayaptimi?",
+      "expected_output": "A review in Uzbek that catches the document-type mismatch (titled TAVSIYANOMA but closes with the tavsifnoma formula 'tavsifnoma taqdim etilmoqda'), states the correct closing verb for a tavsiyanoma, flags the entirely missing signature block, explains the tavsiyanoma/tavsifnoma distinction, and flags the undated, unevidenced achievement claims.",
+      "files": [
+        "evals/files/Tavsiyanoma_Rahimova.docx"
+      ],
+      "assertions": [
+        "Identifies the mismatch between the title TAVSIYANOMA and the closing formula 'tavsifnoma taqdim etilmoqda'",
+        "States that a tavsiyanoma must close with a recommendation verb such as 'tavsiya etaman'",
+        "Explains the difference between a tavsiyanoma and a tavsifnoma",
+        "Flags that the signature block (dean's position and name) is completely missing",
+        "Flags that achievements are stated without dates, organiser names, event names or award names",
+        "Mentions that the achievement claims need supporting documents/proof in the folder, or gives the date+organiser+event+role+award formula",
+        "Mentions at least one further element of the Prezident stipendiyasi document folder beyond this single document (e.g. obyektivka, HEMIS transcript, ilmiy ishlar ro'yxati, ilmiy rahbar fikr-mulohazasi, or that tavsiyanoma and tavsifnoma need different signatories)",
+        "The review is written in Uzbek",
+        "The prescribed fix is in the RIGHT direction: it keeps the document a tavsiyanoma ending in 'tavsiya etaman' (or, if it recommends switching to a tavsifnoma, the template it supplies uses the tavsifnoma closing formula consistently) — it must not hand back a template that reproduces the same title/closing-verb mismatch",
+        "Does not state the different-signatory convention as an absolute rule; either hedges it or attributes it to samples/practice rather than regulation",
+        "Any point-score or folder-composition figures given are hedged as year-dependent, with the student told to confirm against the current nizom"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "program-legitimacy-check",
+      "prompt": "Instagram'da bitta dastur reklamasini ko'rdim: \"International Youth Leadership Summit 2026, Dubai, 3 kunlik, fully funded joylar bor!\" Ro'yxatdan o'tish uchun $25 application fee to'lash kerak ekan. Saytida 300 ta ishtirokchi qabul qilinadi, shundan 10 tasiga full grant beriladi deb yozilgan. Sertifikat ham berisharkan.\n\nMen 3-kurs talabasiman, IELTS 6.0, universitetda 2 marta konferensiyada qatnashganman. Topshirsam bo'ladimi? Motivatsion xat yozishga yordam bering.",
+      "expected_output": "A response in Uzbek that runs the legitimacy check BEFORE helping write anything: flags that a fee-charging 'fully funded' program is a warning sign, that 10 funded places out of 300 fails the ratio test, advises emailing the official address and expecting a substantive reply, warns the student's current profile will likely land in the self-funded category, and questions the certificate's institutional standing.",
+      "files": [],
+      "assertions": [
+        "Runs a legitimacy/verification check on the program before offering to help write the motivation letter",
+        "Flags that charging an application fee for a 'fully funded' opportunity is a warning sign",
+        "Applies the ratio test — 10 fully funded places out of 300 participants is too few to be worth applying to",
+        "Advises emailing the program's official address with questions and treating a non-reply as disqualifying",
+        "Warns that with the described profile the student will likely end up in the self-funded category",
+        "Questions the institutional standing/value of the certificate or the identity of the organiser",
+        "The response is written in Uzbek",
+        "Does not produce a complete, submission-ready motivation letter for this unverified program",
+        "Any drafting help offered is explicitly gated on the verification outcome (structure and one worked example are fine; a finished letter is not)",
+        "Does not invent specific cost figures (participation fees, total trip cost, applicant numbers) that the student never supplied and that are not verifiable"
+      ]
+    }
+  ]
+}
