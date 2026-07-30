@@ -1,37 +1,29 @@
 # Application Mentor - v1.0
 
-Application Mentor is an AI-agent skill for reviewing a student's own grant,
-scholarship, internship, exchange, and university application documents. It
-looks at a draft from a selection committee's perspective and identifies the
-specific places where it becomes generic, unsupported, inconsistent, or
-non-compliant with the target program.
+Application Mentor — bu talabalar tomonidan tayyorlangan grant, stipendiya, stajirovka, almashuv va universitetga qabul hujjatlarini ko'rib chiqish uchun mo'ljallangan AI-agent skilli. U hujjat loyihasini tanlov komissiyasining nuqtai nazaridan tekshiradi va qaysi joylarda umumiy, dalilsiz, nomuvofiq yoki maqsad qilingan dastur talablariga mos kelmasligini aniqlaydi.
 
-## What it reviews
+## Nimalarni ko'rib chiqadi
 
-- CVs and resumes
-- motivation letters and cover letters
-- personal statements and application essays
-- recommendation letters
-- study plans and research proposals
-- application and interview answers
-- Uzbek scholarship documents, including tavsiyanoma, tavsifnoma,
-  taqriznoma, and obyektivka
-- the basic legitimacy of fee-charging programs
+- CV va rezüme
+- motivatsion va qoplama xatlari (motivation va cover letters)
+- shaxsiy bayonotlar va ariza insholari
+- tavsiyanoma xatlari
+- o'qish rejasi va ilmiy takliflar (study plans va research proposals)
+- ariza va intervyu savollariga berilgan javoblar
+- o'zbek stipendiya hujjatlari: tavsiyanoma, tavsifnoma, taqriznoma va obyektivka
+- to'lov asosida tashkil etilgan dasturlarning asosiy qonuniyligi (basic legitimacy)
 
-## Core principles
+## Asosiy tamoyillar
 
-- Check word limits, required sections, format, dates, signatures, and
-  attachments before reviewing style.
-- Tie feedback to the target program and to exact lines from the student's
-  document.
-- Turn unsupported claims into evidence-based statements.
-- Preserve the student's voice.
-- Never invent achievements, scores, dates, names, or numerical results.
-- Use `[YOZING: ...]` placeholders when essential facts are missing.
-- Do not generate a complete submission-ready application the student did not
-  write.
+- So'z chegaralari, talab qilingan bo'limlar, format, sanalar, imzolar va ilovalarni tekshiring — avval uslubni baholashdan oldin ushbu tekshiruvlarni bajaring.
+- Fikrlarni maqsad qilingan dasturga va talabadan kelgan hujjatning aniq qatorlariga bog'lang.
+- Dalilsiz da'volarni dalilga asoslangan bayonotlarga aylantiring.
+- Talabaning ovozini saqlang.
+- Hech qachon yutuqlar, ballar, sanalar, ism yoki raqamli natijalarni ixtiro qilmang.
+- Zarur faktlar yetishmasa, `[YOZING: ...]` joyboshlovchisidan foydalaning.
+- Talaba yozmagan to'liq topshiriq yoki arizani yaratmang.
 
-## Structure
+## Tuzilishi
 
 ```text
 application-mentor/
@@ -50,70 +42,51 @@ application-mentor/
     └── read_document.py
 ```
 
-## Installation in Claude Code
+## Claude Code-ga o'rnatish
 
-Place the `application-mentor` directory in the Claude Code skills directory:
+`application-mentor` papkasini Claude Code skills katalogiga joylashtiring:
 
 ```bash
 mkdir -p ~/.claude/skills
 cp -R application-mentor ~/.claude/skills/
 ```
 
-Start a new conversation after installation so Claude Code can discover the
-skill.
+O'rnatgandan so'ng yangi suhbatni boshlang, shunda Claude Code skillni aniqlaydi.
 
-Example request:
+Misol so'rov:
 
 ```text
 Motivatsion xatimni ko'rib bering. DAAD dasturiga topshiryapman,
 500 so'z limit bor.
 ```
 
-## Document helper
+## Hujjat yordamchisi
 
-The bundled script extracts text and useful statistics from supported
-application documents:
+Birgalikda berilgan skript qo'llab-quvvatlanadigan ariza hujjatlaridan matn va foydali statistika chiqaradi:
 
 ```bash
 python3 scripts/read_document.py "path/to/document.docx"
 python3 scripts/read_document.py "path/to/document.docx" --stats-only
 ```
 
-It uses macOS `textutil` for `.docx`, `.doc`, `.rtf`, and related formats.
-`.pptx`, `.xlsx`, `.txt`, and `.md` processing uses Python's standard library.
-Review PDFs directly in the host AI tool because layout is important for CVs
-and other formatted documents.
+U macOS `textutil` utilitasidan `.docx`, `.doc`, `.rtf` va shunga o'xshash formatlar uchun foydalanadi. `.pptx`, `.xlsx`, `.txt` va `.md` fayllarni Pythonning standart kutubxonasi orqali qayta ishlaydi. CV va boshqa formatlangan hujjatlar uchun sahifa tuzilishi muhim bo'lgani sababli PDFlarni mezbon AI vositasida bevosita ko'rib chiqing.
 
-## Licence — non-commercial use only
+## Litsenziya — faqat tijorat bo'lmagan foydalanish uchun
 
-Required Notice: Copyright 2026 Feruzbek Baqoyev
+Majburiy bildirish: Mualliflik huquqi 2026 Feruzbek Baqoyev
 
-This project is made publicly available under the
-[PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0.txt).
-By using, modifying, or distributing it, you agree to the complete licence
-terms at that link.
+Ushbu loyiha [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0.txt) ostida ommaga taqdim etilgan. Uni ishlatish, o'zgartirish yoki tarqatish orqali siz ushbu havolada berilgan litsenziya shartlariga rozilik bildirasiz.
 
-**Do not use this skill, its instructions, references, or script as a
-commercial component.** Without separate written permission from the copyright
-holder, you may not sell it, resell it, include it in a paid product or
-subscription, integrate it into a commercial service or SaaS product, or use
-it as part of a paid admissions, consulting, or training offering.
+**Ushbu skill, uning ko'rsatmalari, referenslari yoki skriptini tijorat komponenti sifatida ishlatmang.** Mualliflik huquqi egasidan alohida yozma rozilik bo'lmasa, uni sotish, qayta sotish, pullik mahsulot yoki obuna ichiga kiritish, tijorat xizmati yoki SaaS mahsulotiga integratsiya qilish, yoki pullik qabul, konsultatsiya yoki trening taklifida ishlatish taqiqlanadi.
 
-Personal study, research, experimentation, and qualifying use by educational,
-charitable, public-research, public-health, environmental, and government
-institutions are permitted as described in the licence.
+Shaxsiy o'qish, tadqiqot, tajriba va ta'lim, xayriya, jamoat-tadqiqot, sog'liqni saqlash, atrof-muhit va hukumat muassasalari tomonidan litsenziyada belgilangan chegaralar doirasida foydalanishga ruxsat beriladi.
 
-Because commercial use is restricted, this is technically a
-**source-available project rather than OSI-approved open-source software**.
-OSI-approved open-source licences must permit commercial use.
+Tijorat maqsadidagi foydalanish cheklanganligi sababli, texnik jihatdan bu loyiha OSI tomonidan tasdiqlangan ochiq manba emas, balki "manba mavjud" (source-available) loyiha hisoblanadi. OSI tomonidan tasdiqlangan ochiq litsenziyalar tijorat foydalanishga ruxsat berishi kerak.
 
-## Privacy and accuracy
+## Maxfiylik va aniqlik
 
-- Do not publish student applications or personal data in public issues.
-- Use fictional or fully anonymized examples when reporting a problem.
-- Deadlines, fees, stipend amounts, GPA thresholds, visa rules, rankings, and
-  program requirements change. Verify them on the current official page.
-- This project is not affiliated with any university, scholarship,
-  organization, or government agency named in its materials.
-- Feedback from the skill does not guarantee admission, funding, or visa
-  approval.
+- Talabalar arizalarini yoki shaxsiy ma'lumotlarni ommaviy muammolarda e'lon qilmang.
+- Muammo haqida xabar berishda ixtiyoriy yoki to'liq anonimlashtirilgan misollardan foydalaning.
+- Muddati, to'lovlar, stipendiya miqdori, GPA chegaralari, viza qoidalari, reytinglar va dastur talablar o'zgarishi mumkin. Ularni rasmiy yangilangan sahifalarda tekshiring.
+- Ushbu loyiha hech qanday universitet, stipendiya, tashkilot yoki hukumat idorasi bilan bog'liq emas.
+- Skill tomonidan berilgan fikrlar qabul, moliyalashtirish yoki viza tasdiqini kafolatlamaydi.
