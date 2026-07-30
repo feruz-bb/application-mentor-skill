@@ -1,10 +1,10 @@
 # Application Mentor - v1.0
 
-Application Mentor — bu talabalar tomonidan tayyorlangan grant, stipendiya, stajirovka, almashuv va universitetga qabul hujjatlarini ko'rib chiqish uchun mo'ljallangan AI-agent skilli. U hujjat loyihasini tanlov komissiyasining nuqtai nazaridan tekshiradi va qaysi joylarda umumiy, dalilsiz, nomuvofiq yoki maqsad qilingan dastur talablariga mos kelmasligini aniqlaydi.
+Application Mentor — bu ilm yo'lidagilar uchun grant, stipendiya, stajirovka, almashuv va universitetga qabul hujjatlarini ko'rib chiqish uchun mo'ljallangan AI-agent skilli. U hujjat loyihasini tanlov komissiyasining nuqtai nazaridan tekshiradi va qaysi joylarda umumiy, dalilsiz, nomuvofiq yoki maqsad qilingan dastur talablariga mos kelmasligini aniqlaydi.
 
 ## Nimalarni ko'rib chiqadi
 
-- CV va rezüme
+- CV va rezume
 - motivatsion va qoplama xatlari (motivation va cover letters)
 - shaxsiy bayonotlar va ariza insholari
 - tavsiyanoma xatlari
